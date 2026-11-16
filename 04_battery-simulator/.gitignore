@@ -1,0 +1,7 @@
+venv/
+venv_old/
+.venv/
+log/
+__pycache__/
+*.pyc
+route_plots/

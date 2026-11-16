@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BatterySimWindow</class>
+ <widget class="QWidget" name="BatterySimWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Battery Flight-Time &amp; Distance — Unified</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_root" stretch="1,1">
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="topRow" stretch="3,5,3">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="gb_left">
+       <property name="title">
+        <string>Common</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_left">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_batt">
+          <property name="text">
+           <string>Battery</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLabel" name="lbl_batt_mass">
+          <property name="text">
+           <string>—</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_air">
+          <property name="text">
+           <string>Aircraft</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_airmass">
+          <property name="text">
+           <string>Airframe mass (kg)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLabel" name="lbl_air_mass">
+          <property name="text">
+           <string>—</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="ed_alt_m">
+          <property name="text">
+           <string>60.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cb_air"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_battmass">
+          <property name="text">
+           <string>Battery mass (kg)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cb_batt"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="ed_temp_c">
+          <property name="text">
+           <string>25.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_batt_series">
+          <property name="text">
+           <string>System Serials (S)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_totalmass">
+          <property name="text">
+           <string>Total mass (kg)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_alt">
+          <property name="text">
+           <string>Alt (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="ed_total_mass">
+          <property name="text">
+           <string>9.5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cb_batt_series">
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_temp">
+          <property name="text">
+           <string>Temp (°C)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="cb_batt_parallel">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>System Parallel (P)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="gb_mid">
+       <property name="title">
+        <string>Mode / Options</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_mid">
+        <item>
+         <layout class="QHBoxLayout" name="modeRow">
+          <item>
+           <widget class="QRadioButton" name="rb_hover">
+            <property name="text">
+             <string>Hover</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_route">
+            <property name="text">
+             <string>Max range</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_mission">
+            <property name="text">
+             <string>Mission</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="gb_hover">
+          <property name="title">
+           <string>Hover Options</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_hover">
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="sp_hover_thr_pct">
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>60.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_thr">
+             <property name="text">
+              <string>Manual throttle (%)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="cb_hover_auto">
+             <property name="text">
+              <string>AUTO</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="gb_route">
+          <property name="title">
+           <string>Max range options</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_route">
+           <item row="0" column="1" colspan="2">
+            <widget class="QDoubleSpinBox" name="sp_cruise_mps">
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="minimum">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.500000000000000</double>
+             </property>
+             <property name="value">
+              <double>8.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_speed">
+             <property name="text">
+              <string>Cruise speed (m/s)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="gb_mission">
+          <property name="title">
+           <string>Mission  options</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_wp">
+             <property name="text">
+              <string>Waypoints file</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="ed_wp_path">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QToolButton" name="btn_wp_clear">
+             <property name="toolTip">
+              <string>Clear select path</string>
+             </property>
+             <property name="text">
+              <string>✖</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QToolButton" name="btn_wp_browse">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="gb_right">
+       <property name="title">
+        <string>Register</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_right">
+        <item>
+         <widget class="QPushButton" name="btn_add_air">
+          <property name="text">
+           <string>Add Aircraft</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_vtol">
+          <property name="text">
+           <string>Add VTOL</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_del_air">
+          <property name="text">
+           <string>Delete Aircraft</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_batt">
+          <property name="text">
+           <string>Add Battery</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_del_batt">
+          <property name="text">
+           <string>Delete Battery</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="spacer_right">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="bottomRow">
+     <item>
+      <widget class="QPushButton" name="btn_solve">
+       <property name="text">
+        <string>Solve</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="txt_out">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
